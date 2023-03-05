@@ -4,14 +4,14 @@ import animals.Animal;
 
 import java.util.ArrayList;
 
-public interface AnimalCage<T> {
+public interface AnimalCage<T extends Animal> {
     int getCagePollution();
 
-    ArrayList addAnimal(T animal);
+    ArrayList<T> addAnimal(T animal);
 
     int deliverFood(int foodWeight);
 
     int cleanCage();
 
-    Animal getAnimal();
+    T getAnimal();
 }

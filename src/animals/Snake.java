@@ -5,8 +5,8 @@ public class Snake extends Animal {
     protected static final int MAX_WEIGHT = 100;
     protected static final String TYPE = "Snake";
 
-    public Snake(int yearOfBirth, int weight, int numberOfLimbs, int bodyLength) {
-        super(yearOfBirth, weight, numberOfLimbs);
+    public Snake(int age, int weight, int numberOfLimbs, int bodyLength) {
+        super(age, weight, numberOfLimbs);
         this.bodyLength = bodyLength;
     }
 
@@ -28,5 +28,3 @@ public class Snake extends Animal {
         return TYPE;
     }
 }
-
-

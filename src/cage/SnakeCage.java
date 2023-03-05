@@ -1,6 +1,5 @@
 package cage;
 
-import animals.Animal;
 import animals.Snake;
 
 import java.util.ArrayList;
@@ -41,14 +40,21 @@ public class SnakeCage implements AnimalCage<Snake> {
         return pollution = 0;
     }
 
-    public Animal getAnimal() {
+    public Snake getAnimal() {
         if (!snakes.isEmpty()) {
-            Animal snake = snakes.get(0);
+            Snake snake = snakes.get(0);
             snakes.remove(0);
             return snake;
         } else {
             System.out.println("Cage is empty");
         }
         return null;
+    }
+
+    public String toString() {
+        return "SnakeCage{" +
+                "snakes count = " + snakes.size() +
+                "snakes=" + snakes +
+                '}';
     }
 }

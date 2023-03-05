@@ -7,8 +7,8 @@ public class Lion extends Animal implements Comparable<Lion> {
     protected static final String TYPE = "Lion";
 
 
-    public Lion(int yearOfBirth, int weight, int numberOfLimbs, int maneVolume) {
-        super(yearOfBirth, weight, numberOfLimbs);
+    public Lion(int age, int weight, int numberOfLimbs, int maneVolume) {
+        super(age, weight, numberOfLimbs);
         this.maneVolume = maneVolume;
     }
 

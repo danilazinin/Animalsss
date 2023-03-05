@@ -1,6 +1,5 @@
 package cage;
 
-import animals.Animal;
 import animals.Wolf;
 import iterator.WolfIterator;
 
@@ -54,9 +53,9 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
     }
 
     @Override
-    public Animal getAnimal() {
+    public Wolf getAnimal() {
         if (!wolfs.isEmpty()) {
-            Animal wolf = wolfs.get(0);
+            Wolf wolf = wolfs.get(0);
             wolfs.remove(0);
             return wolf;
         } else {

@@ -1,8 +1,10 @@
 package animals;
 
 public class Wolf extends Animal implements Comparable<Wolf> {
-    public Wolf(int age, int weight, int numberOfLimbs) {
+    private int height;
+    public Wolf(int age, int weight, int numberOfLimbs, int height) {
         super(age, weight, numberOfLimbs);
+        this.height = height;
     }
 
     protected static final int MAX_WEIGHT = 100;

@@ -1,6 +1,5 @@
 package cage;
 
-import animals.Animal;
 import animals.Lion;
 import animals.LionComparator;
 
@@ -26,7 +25,7 @@ public class LionCage implements AnimalCage<Lion> {
 
     public String toString() {
         return "LionCage{" +
-                "pollution =" + pollution +
+                "lions count = " + lions.size() +
                 ", lions=" + lions +
                 '}';
     }
@@ -39,10 +38,6 @@ public class LionCage implements AnimalCage<Lion> {
     public ArrayList<Lion> addAnimal(Lion animal) {
         lions.add((Lion) animal);
         return lions;
-    }
-
-    public int deliverFood(int foodWeight, Animal animal) {
-        return 0;
     }
 
     @Override
@@ -63,9 +58,9 @@ public class LionCage implements AnimalCage<Lion> {
     }
 
     @Override
-    public Animal getAnimal() {
+    public Lion getAnimal() {
         if (!lions.isEmpty()) {
-            Animal lion = lions.get(0);
+            Lion lion = lions.get(0);
             lions.remove(0);
             return lion;
         } else {
